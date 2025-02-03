@@ -1,7 +1,6 @@
 .main-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
 }
 .input-box {
   width: 100%;
@@ -24,27 +23,28 @@
 .current-temperature {
   width: 100%;
   display: flex;
+  gap: 10px;
 }
 .current-temperature__icon-container {
   flex-grow: 1.25;
   text-align: center;
+  padding-top: 20px;
 }
 .current-temperature__icon {
-  width: 10.5rem;
+  width: 10rem;
 }
 .current-temperature__content-container {
-  flex-grow: 1;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+
 .current-temperature__value {
-  font-size: 5.25rem;
+  font-size: 4.25rem;
   font-weight: 300;
-  transform: translate(-25%, 0%);
 }
 .current-temperature__summary {
   font-size: 1.125em;
   margin-top: -0.5em;
-  transform: translate(-35%, -10%);
 }
 
 .current-stats {
@@ -54,7 +54,7 @@
 .weather-by-hour {
   width: 100%;
   display: none;
-  border: 3px solid blue;
+  border: 3px solid rgb(255, 157, 0);
 }
 .next-5-days {
   width: 100%;
