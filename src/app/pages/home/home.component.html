@@ -1,0 +1,31 @@
+<div class="main-container">
+  <input
+    class="input-box"
+    type="text"
+    placeholder="try 'Guntur'"
+    (input)="setCity($event)"
+  />
+
+  <div class="location-and-date">
+    <h1 class="location-and-date__location">
+      {{ displayCity }} {{ displayRegionCountry }}
+    </h1>
+    <div>{{ lastUpdated | date : "mediumDate" }}</div>
+  </div>
+  <div class="current-temperature">
+    <div class="current-temperature__icon-container">
+      <img
+        [src]="weatherIcon"
+        class="current-temperature__icon"
+        alt="current weather image icon"
+      />
+    </div>
+    <div class="current-temperature__content-container">
+      <div class="current-temperature__value">{{ tempInCentigrade }}&deg;</div>
+      <div class="current-temperature__summary">{{ summary }}</div>
+    </div>
+  </div>
+  <div class="current-stats">C) current-status</div>
+  <div class="weather-by-hour">D) weather by hour</div>
+  <div class="next-5-days">E) next-5-days</div>
+</div>
