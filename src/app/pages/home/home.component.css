@@ -26,6 +26,7 @@
 }
 .location-and-date {
   width: 100%;
+  margin-bottom: 20px;
 }
 .location-and-date__location {
   margin: 0;
@@ -45,7 +46,6 @@
 .current-temperature__icon-container {
   flex-grow: 1.25;
   text-align: center;
-  padding-top: 20px;
   font-size: 6rem;
 }
 .current-temperature__icon {

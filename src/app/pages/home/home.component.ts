@@ -55,9 +55,9 @@ export class HomeComponent implements OnInit {
   }
   getIcon(day: number, code: number) {
     if (day === 1 && code === 1000) {
-      return '1000-d-sunny.svg';
+      return '1000-d-sunny.png';
     } else if (day === 0 && code === 1000) {
-      return '1000-n-clear.svg';
+      return '1000-n-clear.png';
     } else if (day === 1 && code === 1003) {
       return '1003-d-partly-cloudy.png';
     } else if (day === 0 && code === 1003) {
