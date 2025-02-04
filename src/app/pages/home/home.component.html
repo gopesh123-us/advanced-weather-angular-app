@@ -10,7 +10,10 @@
 
     <div class="location-and-date">
       <h1 class="location-and-date__location">
-        {{ displayCity }} {{ displayRegionCountry }}
+        {{ displayCity }}
+        <span class="location-and-date__country">{{
+          displayRegionCountry | uppercase
+        }}</span>
       </h1>
       <div>{{ lastUpdated | date : "MMM d, y, h:mm a" }}</div>
     </div>

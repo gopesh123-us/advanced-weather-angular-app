@@ -64,8 +64,16 @@ export class HomeComponent implements OnInit {
       return '1003-n-partly-cloudy.png';
     } else if (day === 1 && code === 1030) {
       return '1030-d-mist.png';
+    } else if (day === 1 && code === 1009) {
+      return '1009-d-overcast.png';
+    } else if (day === 0 && code === 1009) {
+      return '1009-n-overcast.png';
     } else if (day === 0 && code === 1030) {
       return '1030-n-mist.svg';
+    } else if (day === 1 && code === 1063) {
+      return '1063-d-patchy-rain.png';
+    } else if (day === 0 && code === 1063) {
+      return '1063-n-patchy-rain.png';
     } else if (day === 0 && code == 1213) {
       return '1213-d-light-snow.png';
     } else if (day === 0 && code === 1213) {
