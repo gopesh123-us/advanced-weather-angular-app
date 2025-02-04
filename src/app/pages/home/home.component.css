@@ -42,6 +42,7 @@
   width: 100%;
   display: flex;
   gap: 10px;
+  border-bottom: 2px solid hsl(0, 0%, 30%);
 }
 .current-temperature__icon-container {
   flex-grow: 1.25;
@@ -67,7 +68,31 @@
 
 .current-stats {
   width: 100%;
-  border: 3px solid red;
+  margin: auto 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+.stat {
+  text-align: center;
+  padding: 0px 5px;
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+.stat__data {
+  font-size: 1.3rem;
+  color: hsl(0, 0%, 100%);
+  margin: 0;
+}
+.stat__desc {
+  font-size: 1rem;
+  margin: 0;
+  color: hsl(0, 1%, 60%);
+  text-align: center;
 }
 .weather-by-hour {
   width: 100%;

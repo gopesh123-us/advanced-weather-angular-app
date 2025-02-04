@@ -25,6 +25,14 @@ export class HomeComponent implements OnInit {
   tempInCentigrade: string = '';
   lastUpdated: string = '';
   isDay: number = 0;
+
+  high: string = '';
+  low: string = '';
+  wind: number = 0;
+  sunrise: string = '';
+  sunset: string = '';
+  rain: string = '';
+
   ngOnInit(): void {
     this.checkWeather();
   }
@@ -51,6 +59,12 @@ export class HomeComponent implements OnInit {
         data.current.condition.code
       );
       this.isDay = data.current.is_day;
+      this.wind = data.current.wind_kph;
+      this.rain = `${data.forecast.forecastday[0].day.totalprecip_in}in`;
+      this.high = `${data.forecast.forecastday[0].day.maxtemp_c}`;
+      this.low = `${data.forecast.forecastday[0].day.mintemp_c}`;
+      this.sunrise = `${data.forecast.forecastday[0].astro.sunrise}`;
+      this.sunset = `${data.forecast.forecastday[0].astro.sunset}`;
     });
   }
   getIcon(day: number, code: number) {

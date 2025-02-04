@@ -32,7 +32,32 @@
         <div class="current-temperature__summary">{{ summary }}</div>
       </div>
     </div>
-    <div class="current-stats">C) current-status</div>
+    <div class="current-stats">
+      <div class="stat">
+        <p class="stat__data">{{ high }}&deg;</p>
+        <p class="stat__desc">High</p>
+      </div>
+      <div class="stat">
+        <p class="stat__data">{{ wind }}kph</p>
+        <p class="stat__desc">Wind</p>
+      </div>
+      <div class="stat">
+        <p class="stat__data">{{ sunrise | lowercase }}</p>
+        <p class="stat__desc">Sunrise</p>
+      </div>
+      <div class="stat">
+        <p class="stat__data">{{ low }}&deg;</p>
+        <p class="stat__desc">Low</p>
+      </div>
+      <div class="stat">
+        <p class="stat__data">{{ rain }}</p>
+        <p class="stat__desc">Rain</p>
+      </div>
+      <div class="stat">
+        <p class="stat__data">{{ sunset | lowercase }}</p>
+        <p class="stat__desc">Sunset</p>
+      </div>
+    </div>
     <div class="weather-by-hour">D) weather by hour</div>
     <div class="next-5-days">E) next-5-days</div>
   </div>
