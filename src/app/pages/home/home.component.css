@@ -85,14 +85,12 @@
   gap: 20px;
 }
 .day-forcast {
-  border: 1px solid white;
   background-color: #428bd9db;
   opacity: 0.8;
   border-radius: 10px;
-  min-width: 65px;
-  min-height: 112px;
   text-align: center;
   border: none;
+  height: 100%;
 }
 .stat {
   text-align: center;
