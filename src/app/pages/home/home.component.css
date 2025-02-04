@@ -40,14 +40,15 @@
 }
 .current-temperature {
   width: 100%;
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px;
+  column-gap: 10px;
   border-bottom: 2px solid hsl(0, 0%, 30%);
+  place-items: center;
 }
 .current-temperature__icon-container {
   flex-grow: 1.25;
-  text-align: center;
-  font-size: 6rem;
 }
 .current-temperature__icon {
   width: 7rem;
@@ -68,9 +69,8 @@
 
 .current-stats {
   width: 100%;
-  margin: auto 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1.5fr;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
 }
@@ -118,6 +118,9 @@
     margin: 0 auto;
     margin-bottom: 30px;
   }
+  .current-stats {
+    border-left: 2px solid hsl(0, 0%, 30%);
+  }
 }
 
 @media screen and (min-width: 1140px) {
@@ -125,5 +128,8 @@
     width: 1120px;
     margin: 16px auto;
     font-size: 1.1em;
+  }
+  .current-stats {
+    border-left: 2px solid hsl(0, 0%, 30%);
   }
 }
