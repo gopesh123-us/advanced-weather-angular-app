@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
   sunrise: string = '';
   sunset: string = '';
   rain: string = '';
+  forecast: any[] = [];
 
   ngOnInit(): void {
     this.checkWeather();
@@ -65,9 +66,12 @@ export class HomeComponent implements OnInit {
       this.low = `${data.forecast.forecastday[0].day.mintemp_c}`;
       this.sunrise = `${data.forecast.forecastday[0].astro.sunrise}`;
       this.sunset = `${data.forecast.forecastday[0].astro.sunset}`;
+      this.forecast = data.forecast.forecastday;
+      console.log(this.forecast);
     });
   }
-  getIcon(day: number, code: number) {
+
+  getIcon(day: number = 0, code: number) {
     if (day === 1 && code === 1000) {
       return '1000-d-sunny.png';
     } else if (day === 0 && code === 1000) {

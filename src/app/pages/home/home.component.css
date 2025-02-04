@@ -44,7 +44,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 150px;
   column-gap: 10px;
-  border-bottom: 2px solid hsl(0, 0%, 30%);
+  border-bottom: 2px solid hsl(0, 0%, 50%);
   place-items: center;
 }
 .current-temperature__icon-container {
@@ -52,6 +52,9 @@
 }
 .current-temperature__icon {
   width: 7rem;
+}
+.current-temperature__icon-forcast {
+  width: 2rem;
 }
 .current-temperature__content-container {
   display: flex;
@@ -73,6 +76,23 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
+  border-bottom: 2px solid hsl(0, 0%, 50%);
+  margin-bottom: 15px;
+}
+.days-forcast-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  place-items: center;
+}
+.day-forcast {
+  border: 1px solid white;
+  background-color: #428bd9db;
+  opacity: 0.8;
+  border-radius: 10px;
+  min-width: 65px;
+  min-height: 112px;
+  text-align: center;
+  border: none;
 }
 .stat {
   text-align: center;
@@ -101,7 +121,6 @@
 }
 .next-5-days {
   width: 100%;
-  border: 3px solid yellow;
 }
 
 @media screen and (min-width: 768px) {
@@ -120,7 +139,7 @@
     margin-bottom: 30px;
   }
   .current-stats {
-    border-left: 2px solid hsl(0, 0%, 30%);
+    border-left: 2px solid hsl(0, 0%, 50%);
   }
 }
 
@@ -131,7 +150,7 @@
     font-size: 1.1em;
   }
   .current-stats {
-    border-left: 2px solid hsl(0, 0%, 30%);
+    border-left: 2px solid hsl(0, 0%, 50%);
   }
   .current-temperature {
     border-bottom: none;
