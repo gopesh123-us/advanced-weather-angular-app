@@ -100,6 +100,10 @@ export class HomeComponent implements OnInit {
       return '1213-d-light-snow.png';
     } else if (day === 0 && code === 1213) {
       return '1213-n-light-snow.png';
+    } else if (day === 1 && code === 1258) {
+      return '1258-d-moderate-heavy-rain.png';
+    } else if (day === 0 && code === 1258) {
+      return '1258-n-moderate-heavy-rain.png';
     } else {
       return 'icon-not available';
     }
