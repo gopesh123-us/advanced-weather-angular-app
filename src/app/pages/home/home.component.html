@@ -5,7 +5,7 @@
       type="text"
       placeholder="try 'Guntur'"
       (input)="setCity($event)"
-      (keyup)="checkWeather()"
+      (keyup.enter)="checkWeather()"
     />
 
     <div class="location-and-date">
