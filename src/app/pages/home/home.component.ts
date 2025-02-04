@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit {
   sunset: string = '';
   rain: string = '';
   forecast: any[] = [];
+  byHourList: any[] = [];
 
   ngOnInit(): void {
     this.checkWeather();
@@ -68,6 +69,12 @@ export class HomeComponent implements OnInit {
       this.sunset = `${data.forecast.forecastday[0].astro.sunset}`;
       this.forecast = data.forecast.forecastday;
       console.log(this.forecast);
+      this.byHourList = data.forecast.forecastday[0].hour.filter(
+        (_: any, index: number) => {
+          return index % 3 === 0;
+        }
+      );
+      console.log(this.byHourList);
     });
   }
 
@@ -96,6 +103,10 @@ export class HomeComponent implements OnInit {
       return '1063-d-patchy-rain.png';
     } else if (day === 0 && code === 1063) {
       return '1063-n-patchy-rain.png';
+    } else if (day === 1 && code === 1153) {
+      return '1153-d-light-drizzle.png';
+    } else if (day === 0 && code === 1153) {
+      return '1153-n-light-drizzle.png';
     } else if (day === 1 && code == 1213) {
       return '1213-d-light-snow.png';
     } else if (day === 0 && code === 1213) {

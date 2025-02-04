@@ -82,7 +82,7 @@
 .days-forcast-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  place-items: center;
+  gap: 20px;
 }
 .day-forcast {
   border: 1px solid white;
@@ -114,10 +114,29 @@
   color: hsl(0, 1%, 60%);
   text-align: center;
 }
-.weather-by-hour {
+.weather-by-hour-container {
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+.todays-weather {
   display: none;
-  border: 3px solid rgb(255, 157, 0);
+}
+.weather-by-hour {
+  padding: 5px 0;
+  height: 100%;
+  display: none;
+  background-color: #428bd9db;
+  opacity: 0.8;
+  border-radius: 10px;
+  text-align: center;
+}
+.weather-by-hour-container:nth-of-type(3) {
+  background-color: red;
+}
+.current-temperature__icon-hour {
+  width: 2.5rem;
 }
 .next-5-days {
   width: 100%;
@@ -125,6 +144,9 @@
 
 @media screen and (min-width: 768px) {
   .weather-by-hour {
+    display: block;
+  }
+  .todays-weather {
     display: block;
   }
   .current-stats,
@@ -154,5 +176,8 @@
   }
   .current-temperature {
     border-bottom: none;
+  }
+  .todays-weather {
+    display: block;
   }
 }

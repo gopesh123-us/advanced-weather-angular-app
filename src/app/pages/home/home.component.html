@@ -58,7 +58,23 @@
         <p class="stat__desc">Sunset</p>
       </div>
     </div>
-    <div class="weather-by-hour">D) weather by hour</div>
+    <p class="todays-weather">Today's weather</p>
+    <div class="weather-by-hour-container">
+      <div
+        class="each-hour-container"
+        *ngFor="let hour of byHourList; let i = index"
+      >
+        <div class="weather-by-hour">
+          <p>{{ hour.time | date : "ha" | lowercase }}</p>
+          <img
+            [src]="getIcon(hour.condition.isDay, hour.condition.code)"
+            class="current-temperature__icon-hour"
+            alt="current weather image icon"
+          />
+          <p>{{ hour.temp_c | number : "1.0-0" }}&deg;</p>
+        </div>
+      </div>
+    </div>
     <div class="next-5-days">
       <p>Next 5 days</p>
       <div class="days-forcast-container">
