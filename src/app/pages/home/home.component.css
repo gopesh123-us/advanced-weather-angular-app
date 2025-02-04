@@ -111,6 +111,7 @@
   .current-stats,
   .current-temperature {
     width: 50%;
+    border-bottom: none;
   }
   .input-box {
     max-width: 40%;
@@ -131,5 +132,8 @@
   }
   .current-stats {
     border-left: 2px solid hsl(0, 0%, 30%);
+  }
+  .current-temperature {
+    border-bottom: none;
   }
 }
