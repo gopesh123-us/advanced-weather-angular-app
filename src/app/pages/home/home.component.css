@@ -79,7 +79,7 @@
   padding: 0px 5px;
   display: flex;
   flex-direction: column;
-  min-height: 150px;
+  min-height: 100px;
   justify-content: center;
   align-items: center;
 }
