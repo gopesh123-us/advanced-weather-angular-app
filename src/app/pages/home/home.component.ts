@@ -103,6 +103,10 @@ export class HomeComponent implements OnInit {
       return '1063-d-patchy-rain.png';
     } else if (day === 0 && code === 1063) {
       return '1063-n-patchy-rain.png';
+    } else if (day === 1 && code === 1135) {
+      return '1135-d-fog.png';
+    } else if (day === 0 && code === 1135) {
+      return '1135-n-fog.png';
     } else if (day === 1 && code === 1153) {
       return '1153-d-light-drizzle.png';
     } else if (day === 0 && code === 1153) {
