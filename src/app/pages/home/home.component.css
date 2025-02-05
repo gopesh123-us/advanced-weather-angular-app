@@ -53,7 +53,7 @@
 .current-temperature__icon {
   width: 7rem;
 }
-.current-temperature__icon-forcast {
+.current-temperature__icon-forecast__mobile {
   width: 2rem;
 }
 .current-temperature__content-container {
@@ -79,12 +79,12 @@
   border-bottom: 2px solid hsl(0, 0%, 50%);
   margin-bottom: 15px;
 }
-.days-forcast-container {
+.days-forecast-container__mobile {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
-.day-forcast {
+.day-forecast__mobile {
   background-color: #428bd9db;
   opacity: 0.8;
   border-radius: 10px;
@@ -109,7 +109,7 @@
 .stat__desc {
   font-size: 1rem;
   margin: 0;
-  color: hsl(0, 1%, 60%);
+  color: hsl(0, 1%, 80%);
   text-align: center;
 }
 .weather-by-hour-container {
@@ -130,17 +130,43 @@
   border-radius: 10px;
   text-align: center;
 }
-.weather-by-hour-container:nth-of-type(3) {
-  background-color: red;
-}
+
 .current-temperature__icon-hour {
   width: 2.5rem;
 }
-.next-5-days {
+.next-5-days_container {
   width: 100%;
 }
-
+.days-forecast-container__desktop {
+  display: none;
+}
+.day-forecast__desktop {
+  display: none;
+}
+.current-temperature__icon-forecast__desktop {
+  display: none;
+}
+.next-5-days_desktop {
+  display: none;
+}
+/* media queries */
 @media screen and (min-width: 768px) {
+  .days-forecast-container__mobile {
+    display: none;
+  }
+  .day-forecast__mobile {
+    display: none;
+  }
+  .current-temperature__icon-forecast__mobile {
+    display: none;
+  }
+  .next-5-days__mobile {
+    display: none;
+  }
+  .next-5-days_desktop {
+    display: block;
+  }
+
   .weather-by-hour {
     display: block;
   }
@@ -161,9 +187,53 @@
   .current-stats {
     border-left: 2px solid hsl(0, 0%, 50%);
   }
+  .days-forecast-container__desktop {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+  }
+
+  .day-forecast__desktop {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #428bd9db;
+    opacity: 0.8;
+    border-radius: 0;
+    text-align: center;
+    border: none;
+    height: 100%;
+  }
+  .day-forecast-icon__desktop {
+    width: 3rem;
+  }
 }
 
 @media screen and (min-width: 1140px) {
+  .days-forecast-container__mobile {
+    display: none;
+  }
+  .day-forecast__mobile {
+    display: none;
+  }
+  .current-temperature__icon-forecast__mobile {
+    display: none;
+  }
+  .next-5-days__mobile {
+    display: none;
+  }
+
+  .next-5-days_desktop {
+    display: block;
+  }
+
+  .days-forecast-container__desktop {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
   .main-container {
     width: 1120px;
     margin: 16px auto;
@@ -177,5 +247,17 @@
   }
   .todays-weather {
     display: block;
+  }
+  .days-forecast-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+  }
+  .day-forecast {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0px;
   }
 }
