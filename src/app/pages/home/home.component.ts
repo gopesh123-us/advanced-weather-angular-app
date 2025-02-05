@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
   tempInCentigrade: string = '';
   lastUpdated: string = '';
   isDay: number = 0;
+  aqi: string = '';
 
   high: string = '';
   low: string = '';
@@ -62,6 +63,7 @@ export class HomeComponent implements OnInit {
       );
       this.isDay = data.current.is_day;
       this.wind = data.current.wind_kph;
+      this.aqi = data.current.air_quality.pm2_5;
       this.rain = `${data.forecast.forecastday[0].day.totalprecip_in}in`;
       this.high = `${data.forecast.forecastday[0].day.maxtemp_c}`;
       this.low = `${data.forecast.forecastday[0].day.mintemp_c}`;
