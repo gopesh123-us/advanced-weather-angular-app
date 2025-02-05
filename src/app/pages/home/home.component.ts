@@ -111,6 +111,14 @@ export class HomeComponent implements OnInit {
       return '1153-d-light-drizzle.png';
     } else if (day === 0 && code === 1153) {
       return '1153-n-light-drizzle.png';
+    } else if (day === 1 && code === 1195) {
+      return '1195-d-heavy-rain.png';
+    } else if (day === 0 && code === 1195) {
+      return '1195-n-heavy-rain.png';
+    } else if (day === 1 && code === 1204) {
+      return '1204-d-light-sleet.png';
+    } else if (day === 0 && code === 1204) {
+      return '1204-n-light-sleet.png';
     } else if (day === 1 && code == 1213) {
       return '1213-d-light-snow.png';
     } else if (day === 0 && code === 1213) {
