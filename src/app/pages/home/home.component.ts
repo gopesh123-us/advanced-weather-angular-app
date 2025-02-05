@@ -128,7 +128,7 @@ export class HomeComponent implements OnInit {
     } else if (day === 0 && code === 1258) {
       return '1258-n-moderate-heavy-rain.png';
     } else {
-      return 'icon-not available';
+      return 'general-weather-icon.png';
     }
   }
 }
