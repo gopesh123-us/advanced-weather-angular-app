@@ -14,11 +14,13 @@
   );
   --gradient-light: linear-gradient(
     to bottom,
-    #7197bc 0%,
+    #4b83bb 0%,
     #bfc5c3 50%,
-    #faeca8 75%,
-    #e9a443 100%
+    #e9d260 75%,
+    #eb9822 100%
   );
+  --color-for-day: rgba(34, 34, 34, 0.875);
+  --color-for-night: rgb(244, 244, 244, 0.8);
 }
 * {
   -webkit-font-smoothing: antialiased;

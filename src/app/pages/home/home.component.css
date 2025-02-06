@@ -6,9 +6,11 @@
 }
 .main-dark {
   background: var(--gradient-dark);
+  color: var(--color-for-night);
 }
 .main-light {
   background: var(--gradient-light);
+  color: var(--color-for-day);
 }
 .main-container {
   display: flex;
