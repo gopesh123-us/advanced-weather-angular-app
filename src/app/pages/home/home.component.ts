@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
   lastUpdated: string = '';
   isDay: number = 0;
   aqi: string = '';
+  aqiLevel: string = '';
 
   high: string = '';
   low: string = '';
@@ -64,6 +65,7 @@ export class HomeComponent implements OnInit {
       this.isDay = data.current.is_day;
       this.wind = data.current.wind_kph;
       this.aqi = data.current.air_quality.pm2_5;
+      this.aqiLevel = this.getAqiLevel(data.current.air_quality.pm2_5);
       this.rain = `${data.forecast.forecastday[0].day.totalprecip_in}in`;
       this.high = `${data.forecast.forecastday[0].day.maxtemp_c}`;
       this.low = `${data.forecast.forecastday[0].day.mintemp_c}`;
@@ -79,8 +81,31 @@ export class HomeComponent implements OnInit {
       console.log(this.byHourList);
     });
   }
-
-  getIcon(day: number = 0, code: number) {
+  getAqiLevel(aqi: number): string {
+    switch (true) {
+      case aqi < 50:
+        return 'Good';
+        break;
+      case aqi >= 50 && aqi <= 100:
+        return 'Moderate';
+        break;
+      case aqi > 100 && aqi <= 150:
+        return 'Unhealthy for Sensitive Groups';
+        break;
+      case aqi > 150 && aqi <= 200:
+        return 'Unhealthy';
+        break;
+      case aqi > 200 && aqi <= 300:
+        return 'Very Unhealthy';
+        break;
+      case aqi > 300:
+        return 'Hazardous';
+        break;
+      default:
+        return 'invalid aqi';
+    }
+  }
+  getIcon(day: number, code: number) {
     if (day === 1 && code === 1000) {
       return '1000-d-sunny.png';
     } else if (day === 0 && code === 1000) {

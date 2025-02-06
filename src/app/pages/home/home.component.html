@@ -31,10 +31,11 @@
         </div>
         <div class="current-temperature__summary">{{ summary }}</div>
         <div>
-          <p>
-            <span class="stat__desc">AQI</span>&nbsp;
-            <span>{{ aqi }}</span>
-          </p>
+          <div>
+            <span class="stat__desc aqi">AQI</span>&nbsp;
+            <span>{{ aqi | number : "1.1-1" }}</span>
+          </div>
+          <span class="stat__desc aqi">{{ aqiLevel }}</span>
         </div>
       </div>
     </div>
@@ -73,7 +74,7 @@
         <div class="weather-by-hour">
           <p>{{ hour.time | date : "ha" | lowercase }}</p>
           <img
-            [src]="getIcon(hour.condition.isDay, hour.condition.code)"
+            [src]="getIcon(hour.is_day, hour.condition.code)"
             class="current-temperature__icon-hour"
             alt="current weather image icon"
           />

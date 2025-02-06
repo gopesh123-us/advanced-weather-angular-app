@@ -109,8 +109,11 @@
 .stat__desc {
   font-size: 1rem;
   margin: 0;
-  color: hsl(0, 1%, 80%);
+  color: hsl(0, 1%, 90%);
   text-align: center;
+}
+.aqi {
+  font-size: 0.9rem;
 }
 .weather-by-hour-container {
   width: 100%;
@@ -209,55 +212,10 @@
     width: 3rem;
   }
 }
-
 @media screen and (min-width: 1140px) {
-  .days-forecast-container__mobile {
-    display: none;
-  }
-  .day-forecast__mobile {
-    display: none;
-  }
-  .current-temperature__icon-forecast__mobile {
-    display: none;
-  }
-  .next-5-days__mobile {
-    display: none;
-  }
-
-  .next-5-days_desktop {
-    display: block;
-  }
-
-  .days-forecast-container__desktop {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-
   .main-container {
     width: 1120px;
     margin: 16px auto;
     font-size: 1.1em;
-  }
-  .current-stats {
-    border-left: 2px solid hsl(0, 0%, 50%);
-  }
-  .current-temperature {
-    border-bottom: none;
-  }
-  .todays-weather {
-    display: block;
-  }
-  .days-forecast-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 5px;
-  }
-  .day-forecast {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 0px;
   }
 }
