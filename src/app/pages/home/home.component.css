@@ -118,6 +118,7 @@
 .aqi {
   font-size: 0.9rem;
   text-align: left;
+  font-weight: 600;
 }
 .weather-by-hour-container {
   width: 100%;
