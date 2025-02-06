@@ -59,6 +59,7 @@
 .current-temperature__content-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .current-temperature__value {
