@@ -7,6 +7,7 @@ import { WeatherService } from '../../core/services/weather.service';
 
 @Component({
   selector: 'app-home',
+  standalone: true,
   imports: [DatePipe, CommonModule, FontAwesomeModule, NgClass],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
