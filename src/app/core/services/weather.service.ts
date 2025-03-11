@@ -9,7 +9,7 @@ import { environment } from '../../../environments/environment.development';
 export class WeatherService {
   baseUrl: string = 'https://api.weatherapi.com/v1/forecast.json';
   API_KEY = environment.weatherApiKey;
-  days: string = '5';
+  days: string = '3';
   aqi: string = 'yes';
   constructor(private http: HttpClient) {}
   getWeather(city: string): Observable<any> {

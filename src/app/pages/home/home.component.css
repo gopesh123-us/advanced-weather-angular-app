@@ -142,7 +142,7 @@
 .current-temperature__icon-hour {
   width: 2.5rem;
 }
-.next-5-days_container {
+.next-3-days_container {
   width: 100%;
 }
 .days-forecast-container__desktop {
@@ -154,7 +154,7 @@
 .current-temperature__icon-forecast__desktop {
   display: none;
 }
-.next-5-days_desktop {
+.next-3-days_desktop {
   display: none;
 }
 /* media queries */
@@ -168,10 +168,10 @@
   .current-temperature__icon-forecast__mobile {
     display: none;
   }
-  .next-5-days__mobile {
+  .next-3-days__mobile {
     display: none;
   }
-  .next-5-days_desktop {
+  .next-3-days_desktop {
     display: block;
   }
 
