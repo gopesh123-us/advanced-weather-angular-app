@@ -84,7 +84,7 @@
 }
 .days-forecast-container__mobile {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 .day-forecast__mobile {
